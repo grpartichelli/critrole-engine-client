@@ -4,12 +4,12 @@ import {Observable} from "rxjs";
 
 @Injectable({providedIn: 'root'})
 export class Service {
-  private readonly prod_url : string = 'https://critrole-engine-core.herokuapp.com/api/test';
+  private readonly prod_url : string = 'https://critrole-engine-core.herokuapp.com/api/';
 
   constructor(private  httpClient: HttpClient) {
   }
 
   public getTestData() : Observable<string> {
-     return this.httpClient.get(this.prod_url,  {responseType: 'text'})
+     return this.httpClient.get(this.prod_url + 'test',  {responseType: 'text'})
   }
 }
