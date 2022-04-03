@@ -1,10 +1,9 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const proxy = require('express-http-proxy');
 const cors = require('cors')
 app.options('*', cors())
-//app.use('/api', proxy('https://critrole-engine-core.herokuapp.com'));
+
 
 app.use(express.static(__dirname + '/dist/critrole-engine-client'));
 app.get('/*', function(req,res) {
