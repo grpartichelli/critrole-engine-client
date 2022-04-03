@@ -1,5 +1,5 @@
 {
-  "/api": {
+  "/api/*": {
     "target": "https://critrole-engine-core.herokuapp.com",
     "secure": false
   }
