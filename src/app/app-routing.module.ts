@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {Router, RouterModule, Routes} from '@angular/router';
-import {CritroleHomeComponent} from "../critrole-home/critrole-home.component";
+import {CritroleHomeComponent} from "./critrole-home/critrole-home.component";
 
 
 const routes: Routes = [
