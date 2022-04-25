@@ -21,13 +21,15 @@ import {MatRadioModule} from '@angular/material/radio';
 import {CritroleSearchBarComponent} from "./critrole-search-bar/critrole-search-bar.component";
 import {CritroleHomeComponent} from "./critrole-home/critrole-home.component";
 import {HttpClientModule} from "@angular/common/http";
+import {CritroleToolbarComponent} from "./critrole-toolbar/critrole-toolbar.component";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CritroleHomeComponent,
-    CritroleSearchBarComponent
+    CritroleSearchBarComponent,
+    CritroleToolbarComponent
   ],
   imports: [
     BrowserModule,
