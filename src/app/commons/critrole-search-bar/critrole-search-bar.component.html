@@ -2,8 +2,8 @@
   <mat-icon (click)="search()"  class="critrole-search-bar__icon mat-accent">search</mat-icon>
   <mat-form-field  color='accent' class="example-full-width critrole-search-bar__form"  appearance="fill">
     <mat-label >Search</mat-label>
-    <input  class="critrole-search-bar__textarea"  (keyup.enter)="search()" matInput [(ngModel)]="text" name="1" >
-    <mat-hint  align="start"><strong>Press ENTER to search...</strong> </mat-hint>
+    <input  [minlength]="2" class="critrole-search-bar__textarea"  (keyup.enter)="search()" matInput [(ngModel)]="text" name="1" >
+    <mat-hint  align="start"><strong>Press ENTER to search, 3 characters minimum...</strong> </mat-hint>
   </mat-form-field>
 </form>
 

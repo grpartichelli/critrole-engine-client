@@ -13,6 +13,9 @@ export class CritroleSearchBarComponent {
   constructor() {}
 
   public search() {
-    this.textEmitter.emit(this.text)
+    if (this.text.length > 2) {
+      this.textEmitter.emit(this.text)
+    }
+
   }
 }
