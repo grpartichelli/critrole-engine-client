@@ -3,7 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
 import {HttpClientModule} from "@angular/common/http";
-import {CritroleHomeComponent} from "../critrole-home/critole-home.component";
+import {CritroleHomeComponent} from "../critrole-home/critrole-home.component";
 
 @NgModule({
     declarations: [
