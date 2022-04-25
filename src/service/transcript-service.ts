@@ -15,6 +15,6 @@ export class TranscriptService {
         return Promise.reject()
     }
 
-     return this.httpClient.get<Array<TranscriptModel>>(`${this.url}/search/${text}`).toPromise()
+     return this.httpClient.get<Array<TranscriptModel>>(`${this.url}search/${text}`).toPromise()
   }
 }
