@@ -1,0 +1,10 @@
+<form class="example-form critrole-search-bar">
+  <mat-icon (click)="search()"  class="critrole-search-bar__icon mat-accent">search</mat-icon>
+  <mat-form-field  color='accent' class="example-full-width critrole-search-bar__form"  appearance="fill">
+    <mat-label >Search</mat-label>
+    <input  class="mat-accent" (keyup.enter)="search()" matInput [(ngModel)]="text" name="1" >
+    <mat-hint  align="start"><strong>Search any text...</strong> </mat-hint>
+  </mat-form-field>
+</form>
+
+

@@ -1,2 +1,14 @@
 <byoc-toolbar (isSidebarOpenEvent)="setIsSidebarOpen($event)"></byoc-toolbar>
-<router-outlet></router-outlet>
+
+<mat-drawer-container class="content" >
+  <mat-drawer class="sidebar" mode="side" [opened]="isSidebarOpen" >
+
+    <mat-nav-list style="padding: 0">
+      <mat-divider ></mat-divider>
+      <a  mat-list-item routerLink="/"><mat-icon style="margin-right: 10px">search</mat-icon> Search Transcripts</a>
+      <mat-divider ></mat-divider>
+    </mat-nav-list>
+
+  </mat-drawer>
+  <router-outlet ></router-outlet>
+</mat-drawer-container>

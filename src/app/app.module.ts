@@ -20,16 +20,16 @@ import {FormsModule} from '@angular/forms';
 
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatRadioModule} from '@angular/material/radio';
-import {CritroleSearchBarComponent} from "./critrole-search-bar/critrole-search-bar.component";
-import {CritroleHomeComponent} from "./critrole-home/critrole-home.component";
+import {CritroleSearchBarComponent} from "./commons/critrole-search-bar/critrole-search-bar.component";
+import {CritroleSearchTranscriptsComponent} from "./critrole-search-transcripts/critrole-search-transcripts.component";
 import {HttpClientModule} from "@angular/common/http";
-import {CritroleToolbarComponent} from "./critrole-toolbar/critrole-toolbar.component";
+import {CritroleToolbarComponent} from "./commons/critrole-toolbar/critrole-toolbar.component";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CritroleHomeComponent,
+    CritroleSearchTranscriptsComponent,
     CritroleSearchBarComponent,
     CritroleToolbarComponent
   ],

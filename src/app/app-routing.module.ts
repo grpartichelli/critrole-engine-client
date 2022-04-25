@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
 import {Router, RouterModule, Routes} from '@angular/router';
-import {CritroleHomeComponent} from "./critrole-home/critrole-home.component";
+import {CritroleSearchTranscriptsComponent} from "./critrole-search-transcripts/critrole-search-transcripts.component";
 
 
 const routes: Routes = [
-  { path: 'home', component: CritroleHomeComponent },
-  { path: '**', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'search-transcripts', component: CritroleSearchTranscriptsComponent },
+  { path: '**', redirectTo: 'search-transcripts', pathMatch: 'full' },
 ];
 
 @NgModule({
