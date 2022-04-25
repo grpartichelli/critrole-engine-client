@@ -1,0 +1,18 @@
+.critrole-search-bar {
+  &__form {
+    @media (max-width: 1000px) {
+      width: 600px;
+    }
+    width: 800px;
+  }
+
+  &__icon {
+    margin-right: 16px;
+    cursor: pointer;
+  }
+
+  &__textarea {
+    height: 20px;
+    resize: none;
+  }
+}
