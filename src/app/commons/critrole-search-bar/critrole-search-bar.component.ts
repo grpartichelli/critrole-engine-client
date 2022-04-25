@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 
 @Component({
@@ -7,9 +7,12 @@ import {Component} from '@angular/core';
   styleUrls: ['./critrole-search-bar.component.scss'],
 })
 export class CritroleSearchBarComponent {
-  public text = '';
+  @Output() textEmitter = new EventEmitter<string>();
+  text = '';
 
   constructor() {}
+
   public search() {
+    this.textEmitter.emit(this.text)
   }
 }

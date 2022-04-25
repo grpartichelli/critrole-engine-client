@@ -8,4 +8,8 @@ import {Component} from '@angular/core';
 })
 export class CritroleSearchTranscriptsComponent {
 
+
+  searchTranscripts(text : string) {
+    console.log(text)
+  }
 }
