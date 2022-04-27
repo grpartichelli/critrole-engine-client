@@ -1,4 +1,18 @@
 
 .transcripts {
   overflow-y: auto;
+
+  &__card {
+    padding: 24px;
+  }
+
+  &__content {
+    margin-right: 48px;
+  }
+  &__title {
+    font-size: 28px;
+  }
+  &__text {
+    font-size: 18px;
+  }
 }

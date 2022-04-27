@@ -1,14 +1,13 @@
 <div *ngIf="transcripts.length > 0" class="transcripts">
-      <mat-card *ngFor="let transcript of transcripts">
-        <mat-card-title><strong>{{formatNickname(transcript.actor_nickname)}}</strong></mat-card-title>
-        <mat-card-content>
-          <p>"{{transcript.text}}"</p>
+      <mat-card class="transcripts__card" *ngFor="let transcript of transcripts">
+        <mat-card-title class="transcripts__title"><strong>{{formatNickname(transcript.actor_nickname)}}</strong></mat-card-title>
+        <mat-card-content class="transcripts__content">
+          <p class="transcripts__text">"{{transcript.text}}"</p>
         </mat-card-content>
         <mat-divider inset></mat-divider>
         <mat-card-actions>
           <a  target="_blank" href="{{transcript.youtube_link}}" mat-button style="width: 100%; text-align: left"><p><mat-icon style="margin-right: 24px">ondemand_video</mat-icon>{{transcript.timestamp | date:'hh:mm:ss'}}</p></a>
         </mat-card-actions>
-
       </mat-card>
 </div>
 
