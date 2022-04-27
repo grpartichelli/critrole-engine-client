@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {TranscriptModel} from "../../../model/transcript.model";
 
 @Component({
@@ -6,12 +6,9 @@ import {TranscriptModel} from "../../../model/transcript.model";
   templateUrl: './critrole-transcripts.component.html',
   styleUrls: ['./critrole-transcripts.component.scss']
 })
-export class CritroleTranscriptsComponent implements OnInit {
+export class CritroleTranscriptsComponent {
 
-  @Input() transcripts : Array<TranscriptModel> = [];
-  constructor() { }
+  @Input() transcripts: Array<TranscriptModel> = [];
 
-  ngOnInit(): void {
-  }
 
 }
