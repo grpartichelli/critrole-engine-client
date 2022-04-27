@@ -4,15 +4,37 @@
 
   &__card {
     padding: 24px;
+    margin-right: 24px;
   }
 
   &__content {
     margin-right: 48px;
   }
+
   &__title {
     font-size: 28px;
+    color: rgb(63, 81, 181, 1);
   }
+
   &__text {
+    font-size: 20px;
+  }
+
+  &__timestamp {
     font-size: 18px;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    p {
+      margin: 0;
+      font-size: 20px;
+    }
+    mat-icon {
+      color: rgb(255, 64, 129, 1);
+    }
   }
 }
