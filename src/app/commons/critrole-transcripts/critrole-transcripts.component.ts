@@ -10,5 +10,11 @@ export class CritroleTranscriptsComponent {
 
   @Input() transcripts: Array<TranscriptModel> = [];
 
+  public formatNickname(nickname : string) {
+      return `${nickname.slice(0, 1)}${nickname.slice(1).toLowerCase()}`
+  }
 
+  public formatTimestamp(timestamp: string) {
+    return
+  }
 }

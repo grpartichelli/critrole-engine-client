@@ -1,23 +1,15 @@
 <div *ngIf="transcripts.length > 0" class="transcripts">
-  <mat-list>
-    <mat-list-item *ngFor="let transcript of transcripts">
-      <mat-card>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card *ngFor="let transcript of transcripts">
+        <mat-card-title><strong>{{formatNickname(transcript.actor_nickname)}}</strong></mat-card-title>
         <mat-card-content>
-          <p>This card has divider and indeterminate progress as footer</p>
-          <p>This card has divider and indeterminate progress as footer
-
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.</p>
+          <p>"{{transcript.text}}"</p>
         </mat-card-content>
         <mat-divider inset></mat-divider>
         <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
+          <a  target="_blank" href="{{transcript.youtube_link}}" mat-button style="width: 100%; text-align: left"><p><mat-icon style="margin-right: 24px">ondemand_video</mat-icon>{{transcript.timestamp | date:'hh:mm:ss'}}</p></a>
         </mat-card-actions>
+
       </mat-card>
-    </mat-list-item>
-  </mat-list>
 </div>
 
 
