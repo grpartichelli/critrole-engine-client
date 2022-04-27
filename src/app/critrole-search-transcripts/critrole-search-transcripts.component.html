@@ -2,7 +2,9 @@
   <div class="search-transcripts__search-bar-container">
     <critrole-search-bar (textEmitter)="searchTranscripts($event)"></critrole-search-bar>
   </div>
-  <div class="search-transcripts__transcripts-container"></div>
+  <div class="search-transcripts__transcripts-container">
+    <app-critrole-transcripts  [transcripts]="transcripts === undefined ? [] : transcripts"></app-critrole-transcripts>
+  </div>
 </div>
 
 

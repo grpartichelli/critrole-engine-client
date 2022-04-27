@@ -1,9 +1,10 @@
+:host {
+  width: 80%;
+}
+
 .critrole-search-bar {
   &__form {
-    @media (max-width: 1000px) {
-      width: 800px;
-    }
-    width: 1000px;
+    width: 80%;
   }
 
   &__icon {

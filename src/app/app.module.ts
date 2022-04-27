@@ -24,6 +24,7 @@ import {CritroleSearchBarComponent} from "./commons/critrole-search-bar/critrole
 import {CritroleSearchTranscriptsComponent} from "./critrole-search-transcripts/critrole-search-transcripts.component";
 import {HttpClientModule} from "@angular/common/http";
 import {CritroleToolbarComponent} from "./commons/critrole-toolbar/critrole-toolbar.component";
+import {CritroleTranscriptsComponent} from './commons/critrole-transcripts/critrole-transcripts.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {CritroleToolbarComponent} from "./commons/critrole-toolbar/critrole-tool
     AppComponent,
     CritroleSearchTranscriptsComponent,
     CritroleSearchBarComponent,
-    CritroleToolbarComponent
+    CritroleToolbarComponent,
+    CritroleTranscriptsComponent
   ],
   imports: [
     BrowserModule,

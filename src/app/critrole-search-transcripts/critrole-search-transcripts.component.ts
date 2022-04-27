@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {TranscriptService} from "../../service/transcript-service";
+import {TranscriptModel} from "../../model/transcript.model";
 
 
 @Component({
@@ -9,12 +10,14 @@ import {TranscriptService} from "../../service/transcript-service";
 })
 export class CritroleSearchTranscriptsComponent {
 
+  transcripts: Array<TranscriptModel> | undefined = []
+
   constructor(private transcriptService: TranscriptService) {
   }
 
   searchTranscripts(text : string) {
     this.transcriptService.findByText(text)
-      .then(transcripts => console.log(transcripts))
+      .then(transcripts => this.transcripts = transcripts)
       .catch(e => console.log([]))
 
   }
