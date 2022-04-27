@@ -138,20 +138,21 @@ export class CritroleSearchTranscriptsComponent {
   //     "episode_number": 99
   //   }
   // ]
-
+  loading = false;
   constructor(private transcriptService: TranscriptService) {
   }
 
   searchTranscripts(text : string) {
+    this.loading = true;
     this.transcriptService.findByText(text)
       .then(transcripts => {
         this.transcripts = transcripts;
         this.transcripts?.forEach(transcript => {
           transcript.actor_nickname = `${transcript.actor_nickname.slice(0, 1)}${transcript.actor_nickname.slice(1).toLowerCase()}`
           transcript.timestamp = transcript.timestamp.split(" ")[1]
-        })
-        console.log(transcripts)})
-      .catch(e => console.log([]))
+        });
+        this.loading = false})
+      .catch(e =>  this.loading = false)
 
   }
 }

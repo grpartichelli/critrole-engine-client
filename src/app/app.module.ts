@@ -25,6 +25,7 @@ import {CritroleSearchTranscriptsComponent} from "./critrole-search-transcripts/
 import {HttpClientModule} from "@angular/common/http";
 import {CritroleToolbarComponent} from "./commons/critrole-toolbar/critrole-toolbar.component";
 import {CritroleTranscriptsComponent} from './commons/critrole-transcripts/critrole-transcripts.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import {CritroleTranscriptsComponent} from './commons/critrole-transcripts/critr
     FormsModule,
     MatDialogModule,
     MatRadioModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

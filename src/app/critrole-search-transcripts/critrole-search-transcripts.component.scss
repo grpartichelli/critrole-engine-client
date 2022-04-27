@@ -16,7 +16,18 @@
 
   &__transcripts-container {
     flex: 4;
-    overflow-y: scroll;
+    overflow-y: auto;
+    height: 0;
+    margin: 0 12.5% 5% 12.5%;
+    padding: 0;
+  }
+
+  &__spinner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 4;
+    overflow-y: auto;
     height: 0;
     margin: 0 12.5% 5% 12.5%;
     padding: 0;
