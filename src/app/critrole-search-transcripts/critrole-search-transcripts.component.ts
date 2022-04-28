@@ -11,16 +11,22 @@ import {TranscriptModel} from "../../model/transcript.model";
 export class CritroleSearchTranscriptsComponent implements OnInit{
   transcripts: Array<TranscriptModel> | undefined = []
   loading = false;
+  episode : number | undefined = 1;
+  text = " ";
   constructor(private transcriptService: TranscriptService) {
   }
 
   ngOnInit(): void {
-    this.searchTranscripts(" ", 1)
+    this.searchTranscripts()
   }
 
-  searchTranscripts(text : string, episode?: number, nickname?: string) {
+  setText(text : string) {
+    this.text = text
+  }
+
+  searchTranscripts() {
     this.loading = true;
-    this.transcriptService.findByText(text, episode, nickname)
+    this.transcriptService.findByText(this.text, this.episode)
       .then(transcripts => {
         this.transcripts = transcripts;
         this.transcripts?.forEach(transcript => {
