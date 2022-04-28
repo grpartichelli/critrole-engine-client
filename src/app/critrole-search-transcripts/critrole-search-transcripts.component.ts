@@ -55,7 +55,10 @@ export class CritroleSearchTranscriptsComponent implements OnInit {
           transcript.actor_nickname = `${transcript.actor_nickname.slice(0, 1)}${transcript.actor_nickname.slice(1).toLowerCase()}`
           transcript.timestamp = transcript.timestamp.split(" ")[1]
         });
-        this.noResults = true;
+        if (this.transcripts?.length == 0) {
+          this.noResults = true;
+        }
+
         this.loading = false
       })
       .catch(e => this.loading = false)
