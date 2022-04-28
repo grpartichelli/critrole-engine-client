@@ -15,7 +15,7 @@ export class CritroleSearchTranscriptsComponent implements OnInit {
   text = " ";
   actor: string | undefined = undefined;
   actorList = [undefined, 'Matt', 'Laura', 'Taliesin', 'Ashley', 'Liam', 'Marisha', 'Sam' , 'Travis']
-
+  noResults = false;
   constructor(private transcriptService: TranscriptService) {
   }
 
@@ -46,7 +46,7 @@ export class CritroleSearchTranscriptsComponent implements OnInit {
     if (this.text.length < 3 && !this.episode) {
       return;
     }
-
+    this.noResults = false;
     this.loading = true;
     this.transcriptService.findByText(this.text, this.episode, this.actor?.toUpperCase())
       .then(transcripts => {
@@ -55,6 +55,7 @@ export class CritroleSearchTranscriptsComponent implements OnInit {
           transcript.actor_nickname = `${transcript.actor_nickname.slice(0, 1)}${transcript.actor_nickname.slice(1).toLowerCase()}`
           transcript.timestamp = transcript.timestamp.split(" ")[1]
         });
+        this.noResults = true;
         this.loading = false
       })
       .catch(e => this.loading = false)

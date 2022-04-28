@@ -19,12 +19,16 @@
       </mat-select>
     </mat-form-field>
   </div>
-  <div *ngIf="!loading" class="search-transcripts__transcripts-container">
+  <div *ngIf="!loading && !noResults" class="search-transcripts__transcripts-container">
     <app-critrole-transcripts   [transcripts]="transcripts === undefined ? [] : transcripts"></app-critrole-transcripts>
   </div>
   <div class="search-transcripts__spinner-container" *ngIf="loading">
-    <mat-spinner style="margin:  0 10% 10% 0"  [diameter]="180" color="accent"></mat-spinner>
+    <mat-spinner  [diameter]="180" color="accent"></mat-spinner>
   </div>
+  <div class="search-transcripts__spinner-container" *ngIf="!loading && noResults">
+    <h1 style="color: rgb(63, 81, 181)">No results were found.</h1>
+  </div>
+
 </div>
 
 
