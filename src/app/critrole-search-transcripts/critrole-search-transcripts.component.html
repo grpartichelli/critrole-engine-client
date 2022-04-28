@@ -1,14 +1,22 @@
 <div class="search-transcripts" xmlns="http://www.w3.org/1999/html">
   <div class="search-transcripts__search-bar-container">
-    <critrole-search-bar (textEmitter)="setText($event)"></critrole-search-bar>
+    <critrole-search-bar (searchEmitter)="searchTranscripts()" (textEmitter)="setText($event)"></critrole-search-bar>
   </div>
   <div class="search-transcripts__inputs-container">
     <mat-form-field class="search-transcripts__inputs-container__field" appearance="fill">
       <mat-label>Episode Number</mat-label>
-      <input matInput  [(ngModel)]="episode"  type="number" min="1" max="141">
-      <button  matSuffix mat-icon-button aria-label="Clear" (click)="episode=undefined">
+      <input matInput  [(ngModel)]="episode"  type="number" min="1" max="141" (keyup.enter)="searchTranscripts()">
+      <button  matSuffix mat-icon-button  (click)="eraseEpisodeClick()">
         <mat-icon style="font-size: 18px" >close</mat-icon>
       </button>
+    </mat-form-field>
+    <mat-form-field class="search-transcripts__inputs-container__field2" appearance="fill">
+      <mat-label>Actor Nickname</mat-label>
+      <mat-select [(ngModel)]="actor" (selectionChange)="searchTranscripts()">
+        <mat-option *ngFor="let actor of actorList" [value]="actor" >
+          {{actor}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
   </div>
   <div *ngIf="!loading" class="search-transcripts__transcripts-container">

@@ -26,6 +26,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {CritroleToolbarComponent} from "./commons/critrole-toolbar/critrole-toolbar.component";
 import {CritroleTranscriptsComponent} from './commons/critrole-transcripts/critrole-transcripts.component';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatSelectModule} from "@angular/material/select";
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     MatDialogModule,
     MatRadioModule,
     HttpClientModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,14 +8,16 @@ import {Component, EventEmitter, Output} from '@angular/core';
 })
 export class CritroleSearchBarComponent {
   @Output() textEmitter = new EventEmitter<string>();
+  @Output() searchEmitter = new EventEmitter<string>();
   text = '';
 
   constructor() {}
 
-  public search() {
-    if (this.text.length > 2) {
-      this.textEmitter.emit(this.text)
-    }
+  public setText() {
+    this.textEmitter.emit(this.text)
+  }
 
+  public search() {
+    this.searchEmitter.emit()
   }
 }

@@ -19,13 +19,20 @@
   &__inputs-container {
     flex: 1;
     display: flex;
+    justify-content: space-between;
     width: 80%;
 
     margin-top: 16px;
     &__field {
-      width: 20%;
+      width: 25%;
       margin-left: 40px;
     }
+
+    &__field2 {
+      width: 25%;
+      margin-right: 7%;
+    }
+
     &__input {
       text-align: center;
     }
