@@ -16,8 +16,7 @@ export class CritroleSearchCharactersComponent implements OnInit {
   actorList = [undefined, 'Matt', 'Laura', 'Taliesin', 'Ashley', 'Liam', 'Marisha', 'Sam', 'Travis']
 
   character: string | undefined = undefined;
-  characterList = [undefined, 'Matt', 'Laura', 'Taliesin', 'Ashley', 'Liam', 'Marisha', 'Sam', 'Travis']
-
+  characterList = [undefined, "Jester Lavorre", "Mollymauk Tealeaf", "Caduceus Clay", "Kingsley Tealeaf", "Yasha Nydoorin", "Caleb Widogast", "Beauregard Lionett", "Revvetha \"Veth\" Brenatto", "Fjord"]
 
   constructor(private characterService: CharacterService) {
   }
@@ -29,7 +28,7 @@ export class CritroleSearchCharactersComponent implements OnInit {
   searchCharacters() {
     this.noResults = false;
     this.loading = true;
-    this.characterService.find(this.character, this.actor)
+    this.characterService.find(this.character, this.actor?.toUpperCase())
       .then(characters => {
         this.characters = characters !== undefined ? characters[0] : [];
         this.characters?.forEach(character => {

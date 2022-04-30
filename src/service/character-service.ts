@@ -14,7 +14,7 @@ export class CharacterService {
     let params = new HttpParams();
 
     if (name) {
-      params = params.set('character_name', name)
+      params = params.set('name', name)
     }
 
     if (actor_nickname) {
