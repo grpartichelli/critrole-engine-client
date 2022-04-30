@@ -27,6 +27,7 @@ import {CritroleToolbarComponent} from "./commons/critrole-toolbar/critrole-tool
 import {CritroleTranscriptsComponent} from './commons/critrole-transcripts/critrole-transcripts.component';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatSelectModule} from "@angular/material/select";
+import {CritroleSearchCharactersComponent} from './critrole-search-characters/critrole-search-characters.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {MatSelectModule} from "@angular/material/select";
     CritroleSearchTranscriptsComponent,
     CritroleSearchBarComponent,
     CritroleToolbarComponent,
-    CritroleTranscriptsComponent
+    CritroleTranscriptsComponent,
+    CritroleSearchCharactersComponent
   ],
   imports: [
     BrowserModule,
