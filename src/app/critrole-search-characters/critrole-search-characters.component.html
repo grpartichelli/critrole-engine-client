@@ -19,7 +19,7 @@
     </mat-form-field>
   </div>
   <div *ngIf="!loading && !noResults" class="search-characters__characters-container">
-    <app-critrole-characters   [characters]="characters === undefined ? [] : characters"></app-critrole-characters>
+    <app-critrole-characters   [characters]="characters"></app-critrole-characters>
   </div>
   <div class="search-characters__spinner-container" *ngIf="loading">
     <mat-spinner  [diameter]="180" color="accent"></mat-spinner>

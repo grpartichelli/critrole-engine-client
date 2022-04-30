@@ -1,1 +1,25 @@
-<p>critrole-characters works!</p>
+<div *ngIf="characters.length > 0" class="characters">
+  <ng-container *ngFor="let character of characters">
+    <mat-card class="characters__card">
+      <mat-card-title class="characters__title"><strong>{{character.actor_nickname}}</strong>
+      </mat-card-title>
+      <mat-card-content class="characters__content">
+        <p class="characters__text">"{{character.actor_nickname}}"</p>
+      </mat-card-content>
+      <mat-divider inset></mat-divider>
+      <mat-card-actions>
+        <a style="width: 100%;" target="_blank" href="{{character.actor_nickname}}" mat-button>
+          <div class="characters__button">
+            <mat-icon style="margin-right: 16px">ondemand_video</mat-icon>
+            <p class="characters__timestamp">
+              Episode {{character.actor_nickname}} at {{character.actor_nickname}}s
+            </p>
+          </div>
+        </a>
+      </mat-card-actions>
+    </mat-card>
+    <br>
+  </ng-container>
+</div>
+
+

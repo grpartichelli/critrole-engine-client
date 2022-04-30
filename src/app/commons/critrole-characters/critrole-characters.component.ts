@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {TranscriptModel} from "../../../model/transcript.model";
+import {CharacterModel} from "../../../model/character.model";
 
 @Component({
   selector: 'app-critrole-characters',
@@ -8,5 +8,5 @@ import {TranscriptModel} from "../../../model/transcript.model";
 })
 export class CritroleCharactersComponent {
 
-  @Input() characters: Array<TranscriptModel> = [];
+  @Input() characters: Array<CharacterModel> = [];
 }

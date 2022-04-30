@@ -1,24 +1,24 @@
 <div *ngIf="transcripts.length > 0" class="transcripts">
   <ng-container *ngFor="let transcript of transcripts">
-  <mat-card class="transcripts__card">
-    <mat-card-title class="transcripts__title"><strong>{{transcript.actor_nickname}}</strong>
-    </mat-card-title>
-    <mat-card-content class="transcripts__content">
-      <p class="transcripts__text">"{{transcript.text}}"</p>
-    </mat-card-content>
-    <mat-divider inset></mat-divider>
-    <mat-card-actions>
-      <a style="width: 100%;" target="_blank" href="{{transcript.youtube_link}}" mat-button>
-        <div class="transcripts__button">
-          <mat-icon style="margin-right: 16px">ondemand_video</mat-icon>
-          <p class="transcripts__timestamp">
-            Episode {{transcript.episode_number}} at {{transcript.timestamp}}s
-          </p>
-        </div>
-      </a>
-    </mat-card-actions>
-  </mat-card>
-  <br>
+    <mat-card class="transcripts__card">
+      <mat-card-title class="transcripts__title"><strong>{{transcript.actor_nickname}}</strong>
+      </mat-card-title>
+      <mat-card-content class="transcripts__content">
+        <p class="transcripts__text">"{{transcript.text}}"</p>
+      </mat-card-content>
+      <mat-divider inset></mat-divider>
+      <mat-card-actions>
+        <a style="width: 100%;" target="_blank" href="{{transcript.youtube_link}}" mat-button>
+          <div class="transcripts__button">
+            <mat-icon style="margin-right: 16px">ondemand_video</mat-icon>
+            <p class="transcripts__timestamp">
+              Episode {{transcript.episode_number}} at {{transcript.timestamp}}s
+            </p>
+          </div>
+        </a>
+      </mat-card-actions>
+    </mat-card>
+    <br>
   </ng-container>
 </div>
 
