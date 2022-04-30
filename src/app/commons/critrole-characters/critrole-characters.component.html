@@ -2,7 +2,7 @@
   <ng-container *ngFor="let character of characters">
     <mat-card class="characters__card">
       <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
+        <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image': 'url(' + getAvatar(character) + ')'}"></div>
         <mat-card-title class="characters__title"><strong>{{character.name}}</strong>
         </mat-card-title>
         <mat-card-subtitle class="characters__subtitle">{{character.actor_nickname}}</mat-card-subtitle>

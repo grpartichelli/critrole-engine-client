@@ -1,7 +1,7 @@
 <div class="search-characters" >
 
   <div class="search-characters__inputs-container">
-    <mat-form-field class="search-characters__inputs-container__field2" appearance="fill">
+    <mat-form-field  color="accent"  class="search-characters__inputs-container__field2" appearance="fill">
       <mat-label>Character Name</mat-label>
       <mat-select [(ngModel)]="character" (selectionChange)="searchCharacters()">
         <mat-option *ngFor="let character of characterList" [value]="character" >
@@ -9,7 +9,7 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field class="search-characters__inputs-container__field2" appearance="fill">
+    <mat-form-field color="accent"  class="search-characters__inputs-container__field2" appearance="fill">
       <mat-label>Actor Nickname</mat-label>
       <mat-select [(ngModel)]="actor" (selectionChange)="searchCharacters()">
         <mat-option *ngFor="let actor of actorList" [value]="actor" >
