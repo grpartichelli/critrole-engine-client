@@ -1,28 +1,38 @@
-<div class="search-characters" >
+<div class="search-characters">
 
   <div class="search-characters__inputs-container">
-    <mat-form-field  color="accent"  class="search-characters__inputs-container__field2" appearance="fill">
-      <mat-label>Character Name</mat-label>
+
+    <mat-form-field color="accent"  appearance="fill">
+      <mat-label>Name</mat-label>
       <mat-select [(ngModel)]="character" (selectionChange)="searchCharacters()">
-        <mat-option *ngFor="let character of characterList" [value]="character" >
+        <mat-option *ngFor="let character of characterList" [value]="character">
           {{character}}
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field color="accent"  class="search-characters__inputs-container__field2" appearance="fill">
+
+
+    <mat-form-field color="accent" class="search-characters__inputs-container__field" appearance="fill">
       <mat-label>Actor Nickname</mat-label>
       <mat-select [(ngModel)]="actor" (selectionChange)="searchCharacters()">
-        <mat-option *ngFor="let actor of actorList" [value]="actor" >
+        <mat-option *ngFor="let actor of actorList" [value]="actor">
           {{actor}}
         </mat-option>
       </mat-select>
     </mat-form-field>
+    <mat-form-field color="accent" class="search-transcripts__inputs-container__fieldFinal" appearance="fill">
+      <mat-label>Age</mat-label>
+      <input matInput [(ngModel)]="age" type="number" min="1" max="100" (keyup.enter)="searchCharacters()">
+      <button matSuffix mat-icon-button (click)="eraseAgeClick()">
+        <mat-icon style="font-size: 18px">close</mat-icon>
+      </button>
+    </mat-form-field>
   </div>
   <div *ngIf="!loading && !noResults" class="search-characters__characters-container">
-    <app-critrole-characters   [characters]="characters"></app-critrole-characters>
+    <app-critrole-characters [characters]="characters"></app-critrole-characters>
   </div>
   <div class="search-characters__spinner-container" *ngIf="loading">
-    <mat-spinner  [diameter]="180" color="accent"></mat-spinner>
+    <mat-spinner [diameter]="180" color="accent"></mat-spinner>
   </div>
   <div class="search-characters__spinner-container" *ngIf="!loading && noResults">
     <h1 style="color: rgb(63, 81, 181)">No results were found.</h1>

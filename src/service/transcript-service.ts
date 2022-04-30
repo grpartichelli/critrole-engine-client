@@ -22,6 +22,7 @@ export class TranscriptService {
     if (nickname) {
       params = params.set('actor_nickname', nickname)
     }
+
     return this.httpClient.get<Array<TranscriptModel>>(`${this.url}search/${text}`, {params}).toPromise()
   }
 

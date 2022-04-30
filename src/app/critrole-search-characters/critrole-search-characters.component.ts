@@ -18,6 +18,8 @@ export class CritroleSearchCharactersComponent implements OnInit {
   character: string | undefined = undefined;
   characterList = [undefined, "Jester Lavorre", "Mollymauk Tealeaf", "Caduceus Clay", "Kingsley Tealeaf", "Yasha Nydoorin", "Caleb Widogast", "Beauregard Lionett", "Revvetha \"Veth\" Brenatto", "Fjord"]
 
+  age: number | undefined = undefined;
+
   constructor(private characterService: CharacterService) {
   }
 
@@ -25,10 +27,15 @@ export class CritroleSearchCharactersComponent implements OnInit {
     this.searchCharacters()
   }
 
+  eraseAgeClick() {
+    this.age = undefined;
+    this.searchCharacters()
+  }
+
   searchCharacters() {
     this.noResults = false;
     this.loading = true;
-    this.characterService.find(this.character, this.actor?.toUpperCase())
+    this.characterService.find(this.character, this.actor?.toUpperCase(), this.age)
       .then(characters => {
         this.characters = characters !== undefined ? characters[0] : [];
         this.characters?.forEach(character => {

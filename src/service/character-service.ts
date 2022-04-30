@@ -10,7 +10,7 @@ export class CharacterService {
   constructor(private httpClient: HttpClient) {
   }
 
-  public find(name?: string, actor_nickname?: string): Promise<Array<Array<CharacterModel>> | undefined> {
+  public find(name?: string, actor_nickname?: string, age?: number): Promise<Array<Array<CharacterModel>> | undefined> {
     let params = new HttpParams();
 
     if (name) {
@@ -19,6 +19,10 @@ export class CharacterService {
 
     if (actor_nickname) {
       params = params.set('actor_nickname', actor_nickname)
+    }
+
+    if (age) {
+      params = params.set('age', age)
     }
 
     return this.httpClient.get<Array<Array<CharacterModel>>>(this.url, {params}).toPromise()
