@@ -2,20 +2,24 @@
   <ng-container *ngFor="let character of characters">
     <mat-card class="characters__card">
       <mat-card-header>
-        <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image': 'url(' + getAvatar(character) + ')'}"></div>
+        <div mat-card-avatar class="example-header-image"
+             [ngStyle]="{'background-image': 'url(' + getAvatar(character) + ')'}"></div>
         <mat-card-title class="characters__title"><strong>{{character.name}}</strong>
         </mat-card-title>
         <mat-card-subtitle class="characters__subtitle">{{character.actor_nickname}}</mat-card-subtitle>
       </mat-card-header>
 
       <mat-card-content class="characters__content">
-        <ul class="characters__content__list">
+        <ul *ngIf="!character.avg_dice_roll" class="characters__content__list">
           <li><p class="characters__text"><strong>Age:</strong> {{character.age}}</p></li>
           <li><p class="characters__text"><strong>Pronouns:</strong> {{character.pronouns[0]}}</p></li>
           <li><p class="characters__text"><strong>Creature Type:</strong> {{character.creature_type}}</p></li>
           <li><p class="characters__text"><strong>Class:</strong> {{character.dnd_class}}</p></li>
           <li><p class="characters__text"><strong>Race:</strong> {{character.race}}</p></li>
         </ul>
+
+        <p *ngIf="character.avg_dice_roll" style="margin-top: 16px" class="characters__text"><strong>Average Dice
+          Rolls:</strong> {{character.avg_dice_roll.toFixed(2)}}</p>
 
       </mat-card-content>
     </mat-card>
