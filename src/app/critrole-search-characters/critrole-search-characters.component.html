@@ -32,28 +32,31 @@
 
     <mat-form-field color="accent"  appearance="fill">
       <mat-label>Class</mat-label>
-      <mat-select [(ngModel)]="character" (selectionChange)="searchCharacters()">
-        <mat-option *ngFor="let character of characterList" [value]="character">
-          {{character}}
+      <mat-select [(ngModel)]="dnd_class" (selectionChange)="searchCharacters()">
+        <mat-option *ngFor="let dnd_class of classList" [value]="dnd_class">
+          {{dnd_class}}
         </mat-option>
       </mat-select>
     </mat-form-field>
 
     <mat-form-field color="accent" class="search-characters__inputs-container__field" appearance="fill">
       <mat-label>Race</mat-label>
-      <mat-select [(ngModel)]="actor" (selectionChange)="searchCharacters()">
-        <mat-option *ngFor="let actor of actorList" [value]="actor">
-          {{actor}}
+      <mat-select [(ngModel)]="race" (selectionChange)="searchCharacters()">
+        <mat-option *ngFor="let race of raceList" [value]="race">
+          {{race}}
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field color="accent" class="search-characters__inputs-container__field-final" appearance="fill">
+
+    <mat-form-field  color="accent" class="search-characters__inputs-container__field-final" appearance="fill">
       <mat-label>Pronouns</mat-label>
-      <input matInput [(ngModel)]="age" type="number" min="1" max="100" (keyup.enter)="searchCharacters()">
-      <button matSuffix mat-icon-button (click)="eraseAgeClick()">
-        <mat-icon style="font-size: 18px">close</mat-icon>
-      </button>
+      <mat-select [(ngModel)]="pronoun" (selectionChange)="searchCharacters()">
+        <mat-option *ngFor="let pronoun of pronounList" [value]="pronoun">
+          {{pronoun}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
+
   </div>
   <div *ngIf="!loading && !noResults" class="search-characters__characters-container">
     <app-critrole-characters [characters]="characters"></app-critrole-characters>
