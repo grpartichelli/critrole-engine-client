@@ -11,7 +11,6 @@
       </mat-select>
     </mat-form-field>
 
-
     <mat-form-field color="accent" class="search-characters__inputs-container__field" appearance="fill">
       <mat-label>Actor Nickname</mat-label>
       <mat-select [(ngModel)]="actor" (selectionChange)="searchCharacters()">
@@ -20,8 +19,36 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field color="accent" class="search-transcripts__inputs-container__fieldFinal" appearance="fill">
+    <mat-form-field color="accent" class="search-characters__inputs-container__field-final" appearance="fill">
       <mat-label>Age</mat-label>
+      <input matInput [(ngModel)]="age" type="number" min="1" max="100" (keyup.enter)="searchCharacters()">
+      <button matSuffix mat-icon-button (click)="eraseAgeClick()">
+        <mat-icon style="font-size: 18px">close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+
+  <div class="search-characters__inputs-container">
+
+    <mat-form-field color="accent"  appearance="fill">
+      <mat-label>Class</mat-label>
+      <mat-select [(ngModel)]="character" (selectionChange)="searchCharacters()">
+        <mat-option *ngFor="let character of characterList" [value]="character">
+          {{character}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field color="accent" class="search-characters__inputs-container__field" appearance="fill">
+      <mat-label>Race</mat-label>
+      <mat-select [(ngModel)]="actor" (selectionChange)="searchCharacters()">
+        <mat-option *ngFor="let actor of actorList" [value]="actor">
+          {{actor}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field color="accent" class="search-characters__inputs-container__field-final" appearance="fill">
+      <mat-label>Pronouns</mat-label>
       <input matInput [(ngModel)]="age" type="number" min="1" max="100" (keyup.enter)="searchCharacters()">
       <button matSuffix mat-icon-button (click)="eraseAgeClick()">
         <mat-icon style="font-size: 18px">close</mat-icon>

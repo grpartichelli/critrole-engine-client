@@ -13,15 +13,14 @@
     justify-content: space-between;
     width: 80%;
 
-    margin-top: 16px;
+    margin-top: 4px;
     &__field {
       width: 20%;
+      &-final {
+        margin-right: 7%;
+      }
     }
 
-    &__fieldFinal {
-      width: 20%;
-      margin-right: 7%;
-    }
 
     &__input {
       text-align: center;
