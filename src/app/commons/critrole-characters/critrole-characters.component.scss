@@ -1,6 +1,8 @@
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
+  height: 60px;
+  width: 60px;
 }
 .characters {
   overflow-y: auto;
@@ -13,6 +15,15 @@
 
   &__content {
     margin-right: 48px;
+
+    &__list {
+      li {
+        p {
+          margin: 10px 0;
+        }
+      }
+
+    }
   }
 
   &__title {
@@ -20,8 +31,15 @@
     color: rgb(63, 81, 181, 1);
   }
 
+  &__subtitle {
+    font-size: 18px;
+  }
+
   &__text {
     font-size: 20px;
+    strong {
+      color: rgb(63, 81, 181, 1);
+    }
   }
 
   &__timestamp {
