@@ -10,6 +10,19 @@ export class TranscriptService {
   constructor(private httpClient: HttpClient) {
   }
 
+  public loadWordUsageGraph(text: string, nickname?: string): Promise<Blob | undefined> {
+    if (text === '' || !text) {
+      return Promise.reject()
+    }
+
+    let params = new HttpParams();
+    if (nickname) {
+      params = params.set('actor_nickname', nickname)
+    }
+
+    return this.httpClient.get(`${this.url}search_per_episode/${text}`, { responseType: 'blob' , params}).toPromise()
+  }
+
   public findByText(text: string, episode?: number, nickname?: string): Promise<Array<TranscriptModel> | undefined> {
     if (text === '' || !text) {
       return Promise.reject()

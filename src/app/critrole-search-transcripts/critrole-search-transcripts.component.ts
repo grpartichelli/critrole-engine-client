@@ -64,4 +64,5 @@ export class CritroleSearchTranscriptsComponent implements OnInit {
       .catch(e => this.loading = false)
 
   }
+
 }
