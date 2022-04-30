@@ -30,6 +30,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {CritroleSearchCharactersComponent} from './critrole-search-characters/critrole-search-characters.component';
 import {CritroleCharactersComponent} from './commons/critrole-characters/critrole-characters.component';
 import {CritroleAvgDicerollsComponent} from './critrole-avg-dicerolls/critrole-avg-dicerolls.component';
+import {CritroleWordUsageComponent} from './critrole-word-usage/critrole-word-usage.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import {CritroleAvgDicerollsComponent} from './critrole-avg-dicerolls/critrole-a
     CritroleTranscriptsComponent,
     CritroleSearchCharactersComponent,
     CritroleCharactersComponent,
-    CritroleAvgDicerollsComponent
+    CritroleAvgDicerollsComponent,
+    CritroleWordUsageComponent
   ],
   imports: [
     BrowserModule,
