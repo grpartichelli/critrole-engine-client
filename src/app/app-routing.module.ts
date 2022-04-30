@@ -2,11 +2,13 @@ import {NgModule} from '@angular/core';
 import {Router, RouterModule, Routes} from '@angular/router';
 import {CritroleSearchTranscriptsComponent} from "./critrole-search-transcripts/critrole-search-transcripts.component";
 import {CritroleSearchCharactersComponent} from "./critrole-search-characters/critrole-search-characters.component";
+import {CritroleAvgDicerollsComponent} from "./critrole-avg-dicerolls/critrole-avg-dicerolls.component";
 
 
 const routes: Routes = [
   { path: 'search-characters', component: CritroleSearchCharactersComponent },
   { path: 'search-transcripts', component: CritroleSearchTranscriptsComponent },
+  { path: 'analyze-dice-rolls', component: CritroleAvgDicerollsComponent },
   { path: '**', redirectTo: 'search-transcripts', pathMatch: 'full' },
 ];
 

@@ -29,6 +29,7 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatSelectModule} from "@angular/material/select";
 import {CritroleSearchCharactersComponent} from './critrole-search-characters/critrole-search-characters.component';
 import {CritroleCharactersComponent} from './commons/critrole-characters/critrole-characters.component';
+import {CritroleAvgDicerollsComponent} from './critrole-avg-dicerolls/critrole-avg-dicerolls.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import {CritroleCharactersComponent} from './commons/critrole-characters/critrol
     CritroleToolbarComponent,
     CritroleTranscriptsComponent,
     CritroleSearchCharactersComponent,
-    CritroleCharactersComponent
+    CritroleCharactersComponent,
+    CritroleAvgDicerollsComponent
   ],
   imports: [
     BrowserModule,
