@@ -10,6 +10,18 @@ export class TranscriptService {
   constructor(private httpClient: HttpClient) {
   }
 
+  public loadWordcloud(nickname?: string, episode?: number) {
+    let params = new HttpParams();
+    if (episode) {
+      params = params.set('episode_number', episode)
+    }
+
+    if (nickname) {
+      params = params.set('actor_nickname', nickname)
+    }
+    return this.httpClient.get(`${this.url}wordcloud/`, { responseType: 'blob' , params }).toPromise()
+  }
+
   public loadCharacterInteractionGraph(actor1: string, actor2: string) {
     return this.httpClient.get(`${this.url}character_interactions/${actor1}/${actor2}`, { responseType: 'blob' }).toPromise()
   }

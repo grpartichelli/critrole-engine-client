@@ -10,6 +10,7 @@ import {
 import {
   CritroleCharacterInteractionComponent
 } from "./critrole-character-interaction/critrole-character-interaction.component";
+import {CritroleWordcloudComponent} from "./critrole-wordcloud/critrole-wordcloud.component";
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'word-usage', component: CritroleWordUsageComponent },
   { path: 'in-combat-transcripts', component: CritroleInCombatTranscriptsComponent },
   { path: 'character-interaction', component: CritroleCharacterInteractionComponent },
+  { path: 'wordcloud', component: CritroleWordcloudComponent },
   { path: '**', redirectTo: 'search-transcripts', pathMatch: 'full' },
 ];
 
