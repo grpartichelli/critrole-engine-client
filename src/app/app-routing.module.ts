@@ -4,6 +4,9 @@ import {CritroleSearchTranscriptsComponent} from "./critrole-search-transcripts/
 import {CritroleSearchCharactersComponent} from "./critrole-search-characters/critrole-search-characters.component";
 import {CritroleAvgDicerollsComponent} from "./critrole-avg-dicerolls/critrole-avg-dicerolls.component";
 import {CritroleWordUsageComponent} from "./critrole-word-usage/critrole-word-usage.component";
+import {
+  CritroleInCombatTranscriptsComponent
+} from "./critrole-in-combat-transcripts/critrole-in-combat-transcripts.component";
 
 
 const routes: Routes = [
@@ -11,6 +14,7 @@ const routes: Routes = [
   { path: 'search-transcripts', component: CritroleSearchTranscriptsComponent },
   { path: 'analyze-dice-rolls', component: CritroleAvgDicerollsComponent },
   { path: 'word-usage', component: CritroleWordUsageComponent },
+  { path: 'in-combat-transcripts', component: CritroleInCombatTranscriptsComponent },
   { path: '**', redirectTo: 'search-transcripts', pathMatch: 'full' },
 ];
 
