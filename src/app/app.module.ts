@@ -31,6 +31,9 @@ import {CritroleSearchCharactersComponent} from './critrole-search-characters/cr
 import {CritroleCharactersComponent} from './commons/critrole-characters/critrole-characters.component';
 import {CritroleAvgDicerollsComponent} from './critrole-avg-dicerolls/critrole-avg-dicerolls.component';
 import {CritroleWordUsageComponent} from './critrole-word-usage/critrole-word-usage.component';
+import {
+  CritroleInCombatTranscriptsComponent
+} from './critrole-in-combat-transcripts/critrole-in-combat-transcripts.component';
 
 
 @NgModule({
@@ -43,7 +46,8 @@ import {CritroleWordUsageComponent} from './critrole-word-usage/critrole-word-us
     CritroleSearchCharactersComponent,
     CritroleCharactersComponent,
     CritroleAvgDicerollsComponent,
-    CritroleWordUsageComponent
+    CritroleWordUsageComponent,
+    CritroleInCombatTranscriptsComponent
   ],
   imports: [
     BrowserModule,

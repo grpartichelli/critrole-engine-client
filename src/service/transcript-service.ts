@@ -10,6 +10,10 @@ export class TranscriptService {
   constructor(private httpClient: HttpClient) {
   }
 
+  public findInCombat(episode: number) {
+    return this.httpClient.get<Array<Array<TranscriptModel>>>(`${this.url}in_combat/${episode}`).toPromise()
+  }
+
   public loadWordUsageGraph(text: string, nickname?: string): Promise<Blob | undefined> {
     if (text === '' || !text) {
       return Promise.reject()
