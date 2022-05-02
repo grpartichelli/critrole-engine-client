@@ -1,0 +1,21 @@
+<div class="dice-wordcloud" >
+  <h1 style="color: rgb(255, 64, 129);margin: 0 9% 16px 0">Wordcloud By Dice Roll Value</h1>
+  <div class="dice-wordcloud__inputs-container">
+    <div class="dice-wordcloud__inputs-container">
+      <mat-icon (click)="loadWordcloud()"  class="dice-wordcloud__icon mat-accent">search</mat-icon>
+      <mat-form-field color="accent" class="dice-wordcloud__inputs-container__field" appearance="fill">
+        <mat-label>Dice Roll Value</mat-label>
+        <input matInput  [(ngModel)]="dice"  type="number" min="1" max="20" (keyup.enter)="loadWordcloud()">
+      </mat-form-field>
+    </div>
+  </div>
+  <div *ngIf="!loading"  class="dice-wordcloud__image-container">
+    <img [src]="blobData">
+  </div>
+  <div class="dice-wordcloud__spinner-container" *ngIf="loading">
+    <mat-spinner  [diameter]="180" color="accent"></mat-spinner>
+  </div>
+</div>
+
+
+

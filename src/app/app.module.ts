@@ -38,6 +38,8 @@ import {
   CritroleCharacterInteractionComponent
 } from './critrole-character-interaction/critrole-character-interaction.component';
 import {CritroleWordcloudComponent} from './critrole-wordcloud/critrole-wordcloud.component';
+import {CritroleDiceWordcloudComponent} from './critrole-dice-wordcloud/critrole-dice-wordcloud.component';
+import {CritroleRankWordUsageComponent} from './critrole-rank-word-usage/critrole-rank-word-usage.component';
 
 
 @NgModule({
@@ -53,7 +55,9 @@ import {CritroleWordcloudComponent} from './critrole-wordcloud/critrole-wordclou
     CritroleWordUsageComponent,
     CritroleInCombatTranscriptsComponent,
     CritroleCharacterInteractionComponent,
-    CritroleWordcloudComponent
+    CritroleWordcloudComponent,
+    CritroleDiceWordcloudComponent,
+    CritroleRankWordUsageComponent
   ],
   imports: [
     BrowserModule,

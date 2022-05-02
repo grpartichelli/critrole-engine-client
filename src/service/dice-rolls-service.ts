@@ -10,6 +10,10 @@ export class DiceRollsService {
   constructor(private httpClient: HttpClient) {
   }
 
+  public loadWordcloud(episode: number) {
+    return this.httpClient.get(`${this.url}/words/${episode}`, { responseType: 'blob' }).toPromise()
+  }
+
   public findAvgDiceRolls(): Promise<Array<AvgDiceRollModel> | undefined> {
     return this.httpClient.get<Array<AvgDiceRollModel>>(this.url + '/avgchar').toPromise()
   }

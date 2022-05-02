@@ -11,6 +11,8 @@ import {
   CritroleCharacterInteractionComponent
 } from "./critrole-character-interaction/critrole-character-interaction.component";
 import {CritroleWordcloudComponent} from "./critrole-wordcloud/critrole-wordcloud.component";
+import {CritroleDiceWordcloudComponent} from "./critrole-dice-wordcloud/critrole-dice-wordcloud.component";
+import {CritroleRankWordUsageComponent} from "./critrole-rank-word-usage/critrole-rank-word-usage.component";
 
 
 const routes: Routes = [
@@ -21,6 +23,8 @@ const routes: Routes = [
   { path: 'in-combat-transcripts', component: CritroleInCombatTranscriptsComponent },
   { path: 'character-interaction', component: CritroleCharacterInteractionComponent },
   { path: 'wordcloud', component: CritroleWordcloudComponent },
+  { path: 'dice-wordcloud', component: CritroleDiceWordcloudComponent },
+  { path: 'rank-word-usage', component: CritroleRankWordUsageComponent },
   { path: '**', redirectTo: 'search-transcripts', pathMatch: 'full' },
 ];
 
