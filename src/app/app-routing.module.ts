@@ -7,6 +7,9 @@ import {CritroleWordUsageComponent} from "./critrole-word-usage/critrole-word-us
 import {
   CritroleInCombatTranscriptsComponent
 } from "./critrole-in-combat-transcripts/critrole-in-combat-transcripts.component";
+import {
+  CritroleCharacterInteractionComponent
+} from "./critrole-character-interaction/critrole-character-interaction.component";
 
 
 const routes: Routes = [
@@ -15,6 +18,7 @@ const routes: Routes = [
   { path: 'analyze-dice-rolls', component: CritroleAvgDicerollsComponent },
   { path: 'word-usage', component: CritroleWordUsageComponent },
   { path: 'in-combat-transcripts', component: CritroleInCombatTranscriptsComponent },
+  { path: 'character-interaction', component: CritroleCharacterInteractionComponent },
   { path: '**', redirectTo: 'search-transcripts', pathMatch: 'full' },
 ];
 

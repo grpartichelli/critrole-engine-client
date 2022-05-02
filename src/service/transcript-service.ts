@@ -10,6 +10,10 @@ export class TranscriptService {
   constructor(private httpClient: HttpClient) {
   }
 
+  public loadCharacterInteractionGraph(actor1: string, actor2: string) {
+    return this.httpClient.get(`${this.url}character_interactions/${actor1}/${actor2}`, { responseType: 'blob' }).toPromise()
+  }
+
   public findInCombat(episode: number) {
     return this.httpClient.get<Array<Array<TranscriptModel>>>(`${this.url}in_combat/${episode}`).toPromise()
   }
