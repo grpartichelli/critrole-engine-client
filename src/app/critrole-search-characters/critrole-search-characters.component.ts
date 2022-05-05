@@ -46,14 +46,13 @@ export class CritroleSearchCharactersComponent implements OnInit {
     this.loading = true;
     this.characterService.find(this.character, this.actor?.toUpperCase(), this.age, this.dnd_class, this.race, this.pronoun)
       .then(characters => {
-        this.characters = characters !== undefined ? characters[0] : [];
+        this.characters = characters !== undefined ? characters : [];
         this.characters?.forEach(character => {
           character.actor_nickname = `${character.actor_nickname.slice(0, 1)}${character.actor_nickname.slice(1).toLowerCase()}`
         });
         if (this.characters?.length == 0) {
           this.noResults = true;
         }
-
         this.loading = false
       })
       .catch(e => this.loading = false)

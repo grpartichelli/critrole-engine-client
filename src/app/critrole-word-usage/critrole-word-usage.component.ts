@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TranscriptService} from "../../service/transcript-service";
 
 @Component({
@@ -6,16 +6,20 @@ import {TranscriptService} from "../../service/transcript-service";
   templateUrl: './critrole-word-usage.component.html',
   styleUrls: ['./critrole-word-usage.component.scss']
 })
-export class CritroleWordUsageComponent {
+export class CritroleWordUsageComponent implements OnInit{
 
   blobData: string |  ArrayBuffer | null = null
   loading = false;
-  text = "";
+  text = "example";
   loadedText ="";
   actor: string | undefined = undefined;
   actorList = [undefined, 'Matt', 'Laura', 'Taliesin', 'Ashley', 'Liam', 'Marisha', 'Sam', 'Travis']
 
   constructor(private transcriptService: TranscriptService) {
+  }
+
+  ngOnInit(): void {
+    this.searchWordUsage();
   }
 
 

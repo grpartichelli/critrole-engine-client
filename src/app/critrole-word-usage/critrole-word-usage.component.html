@@ -1,7 +1,7 @@
 <div class="word-usage" >
   <h1 style="color: rgb(255, 64, 129);margin: 0 9% 16px 0">Word Usage Analysis</h1>
   <div class="word-usage__search-bar-container">
-    <critrole-search-bar (searchEmitter)="searchWordUsage()" (textEmitter)="setText($event)"></critrole-search-bar>
+    <critrole-search-bar initialText="{{text}}" (searchEmitter)="searchWordUsage()" (textEmitter)="setText($event)"></critrole-search-bar>
   </div>
   <div class="word-usage__inputs-container">
     <mat-form-field color="accent" class="word-usage__inputs-container__field" appearance="fill">

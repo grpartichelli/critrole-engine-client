@@ -18,7 +18,7 @@
     </mat-form-field>
   </div>
   <div *ngIf="!loading"  class="wordcloud__image-container">
-    <img [src]="blobData">
+    <img [src]="blobData" >
   </div>
   <div class="wordcloud__spinner-container" *ngIf="loading">
     <mat-spinner  [diameter]="180" color="accent"></mat-spinner>

@@ -10,7 +10,7 @@ export class CharacterService {
   constructor(private httpClient: HttpClient) {
   }
 
-  public find(name?: string, actor_nickname?: string, age?: number,  dnd_class?: string, race?: string, pronoun?: string): Promise<Array<Array<CharacterModel>> | undefined> {
+  public find(name?: string, actor_nickname?: string, age?: number,  dnd_class?: string, race?: string, pronoun?: string): Promise<Array<CharacterModel> | undefined> {
     let params = new HttpParams();
 
     if (name) {
@@ -37,7 +37,7 @@ export class CharacterService {
       params = params.set('pronouns', "[\"" + pronoun + "\"]")
     }
 
-    return this.httpClient.get<Array<Array<CharacterModel>>>(this.url, {params}).toPromise()
+    return this.httpClient.get<Array<CharacterModel>>(this.url, {params}).toPromise()
   }
 
 
