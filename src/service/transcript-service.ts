@@ -10,6 +10,13 @@ export class TranscriptService {
   constructor(private httpClient: HttpClient) {
   }
 
+  public loadWordRanking(text: string) {
+    if (text === '' || !text) {
+      return Promise.reject()
+    }
+    return this.httpClient.get(`${this.url}rank/${text}`, { responseType: 'blob' }).toPromise()
+  }
+
   public loadWordcloud(nickname?: string, episode?: number) {
     let params = new HttpParams();
     if (episode) {

@@ -1,1 +1,15 @@
-<p>critrole-rank-word-usage works!</p>
+<div class="rank-word-usage" >
+  <h1 style="color: rgb(255, 64, 129);margin: 0 9% 16px 0">Word Usage Ranking</h1>
+  <div class="rank-word-usage__search-bar-container">
+    <critrole-search-bar initialText="{{text}}" (searchEmitter)="searchWordUsage()" (textEmitter)="setText($event)"></critrole-search-bar>
+  </div>
+  <p *ngIf="loadedText" style="font-size: 20px;margin-right: 9%">Analyzing ranked usage of words: "{{loadedText}}"</p>
+  <div *ngIf="!loading"  class="rank-word-usage__image-container">
+    <img [src]="blobData">
+  </div>
+  <div class="rank-word-usage__spinner-container" *ngIf="loading">
+    <mat-spinner  [diameter]="180" color="accent"></mat-spinner>
+  </div>
+</div>
+
+

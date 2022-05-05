@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 
 @Component({
@@ -6,12 +6,19 @@ import {Component, EventEmitter, Output} from '@angular/core';
   templateUrl: './critrole-search-bar.component.html',
   styleUrls: ['./critrole-search-bar.component.scss'],
 })
-export class CritroleSearchBarComponent {
+export class CritroleSearchBarComponent implements OnInit {
+  @Input() initialText: string = "";
   @Output() textEmitter = new EventEmitter<string>();
   @Output() searchEmitter = new EventEmitter<string>();
   text = '';
 
   constructor() {}
+
+  ngOnInit(): void {
+    if (this.initialText !== "") {
+      this.text = this.initialText;
+    }
+  }
 
   public setText() {
     this.textEmitter.emit(this.text)
